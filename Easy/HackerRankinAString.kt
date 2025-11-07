@@ -27,14 +27,14 @@ import kotlin.text.*
 fun hackerrankInString(s: String): String {
     // Write your code here
     var target="hackerrank"
-    var pointer=0
+    var total=0
     
-    for (i in s.indices){
-        if(pointer<target.length && s[i]==target[pointer]){
-            pointer++
-        }
-    }
-    return if(pointer==target.length) "YES" else "NO"
+   for(i in 0 until s.length){
+     if(total<target.length &&target[total]==s[i]){
+        total++
+     }    
+   }
+   return if(total==target.length) "YES" else "NO"
 }
 
 fun main(args: Array<String>) {
